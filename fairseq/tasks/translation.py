@@ -13,8 +13,7 @@ from argparse import Namespace
 from omegaconf import II
 
 import numpy as np
-from fairseq import utils
-from fairseq.logging import metrics
+from fairseq import metrics, utils
 from fairseq.data import (
     AppendTokenDataset,
     ConcatDataset,

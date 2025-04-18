@@ -8,10 +8,12 @@ import logging
 from hydra.core.config_store import ConfigStore
 from fairseq.dataclass.configs import FairseqConfig
 from omegaconf import DictConfig, OmegaConf
-from dataclasses import MISSING
+
 
 logger = logging.getLogger(__name__)
 
+
+from dataclasses import MISSING
 
 def hydra_init(cfg_name="config") -> None:
     cs = ConfigStore.instance()
@@ -33,6 +35,7 @@ def hydra_init(cfg_name="config") -> None:
                 raise
         else:
             logger.warning(f"Skipping {k} - no default or default_factory")
+
 
 
 def add_defaults(cfg: DictConfig) -> None:
