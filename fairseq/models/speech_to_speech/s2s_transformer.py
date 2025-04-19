@@ -19,7 +19,8 @@ from fairseq.models import (
     register_model_architecture,
 )
 from fairseq.models.speech_to_text import S2TTransformerEncoder
-from fairseq.models.speech_to_speech.modules.ctc_decoder import CTCDecoder, StackedEmbedding
+from fairseq.models.speech_to_speech.modules.ctc_decoder import CTCDecoder
+from fairseq.models.speech_to_speech.modules.stacked_embedding import StackedEmbedding
 from fairseq.models.text_to_speech import TTSTransformerDecoder
 from fairseq.models.transformer import (
     Linear,
