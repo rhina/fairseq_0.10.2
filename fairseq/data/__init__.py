@@ -58,6 +58,7 @@ from .multilingual.sampled_multi_dataset import SampledMultiDataset
 from .multilingual.sampled_multi_epoch_dataset import SampledMultiEpochDataset
 from .fasta_dataset import FastaDataset, EncodedFastaDataset
 from .transform_eos_concat_langpair_dataset import TransformEosConcatLangPairDataset
+from .speech_dlm_dataset import SpeechDLMDataset
 
 from .iterators import (
     CountingIterator,
