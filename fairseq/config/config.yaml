@@ -8,9 +8,9 @@ defaults:
     - _self_
     - task: null
     - model: null
-    - criterion: cross_entropy
+    #- criterion: cross_entropy
     - optimizer: null
-    - lr_scheduler: fixed
+    #- lr_scheduler: fixed
     - bpe: null
     - tokenizer: null
     - scoring: null

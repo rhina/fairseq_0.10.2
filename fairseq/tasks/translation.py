@@ -294,6 +294,10 @@ class TranslationTask(FairseqTask):
             args (argparse.Namespace): parsed command-line arguments
         """
 
+
+        print('\n\n\nnik args:', cfg)
+        logger.info('\n\n\nnik args:', cfg)
+
         paths = utils.split_paths(cfg.data)
         assert len(paths) > 0
         # find language pair automatically

@@ -312,7 +312,9 @@ def load_checkpoint_to_cpu(path, arg_overrides=None, load_on_all_ranks=False):
         local_path = PathManager.get_local_path(path)
 
     with open(local_path, "rb") as f:
-        state = torch.load(f, map_location=torch.device("cpu"))
+        state = torch.load(f, map_location=torch.device("cpu"), weights_only=False)
+
+    args = state.get("args", None)
 
     if "args" in state and state["args"] is not None and arg_overrides is not None:
         args = state["args"]
@@ -629,6 +631,7 @@ def _upgrade_state_dict(state):
         ):
             state["args"].max_source_positions = state["args"].max_positions
             state["args"].max_target_positions = state["args"].max_positions
+        
         # default to translation task
         if not hasattr(state["args"], "task"):
             state["args"].task = "translation"

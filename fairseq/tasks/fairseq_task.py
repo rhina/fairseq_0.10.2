@@ -686,6 +686,7 @@ class LegacyFairseqTask(FairseqTask):
         Returns:
             a :class:`~fairseq.criterions.FairseqCriterion` instance
         """
+        
         from fairseq import criterions
 
         return criterions.build_criterion(args, self)
